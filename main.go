@@ -66,15 +66,15 @@ func NewConfig() (*config, error) {
 	var (
 		// file flags
 		all               = flag.Bool("all", false, "generate all. include bo、po、repostiroy、service and so on.")
-		modelsPath        = flag.String("modelsPath", "pkg/models", "Path of the models source code.")
-		outputPath        = flag.String("outputPath", "generated", "Write all file to which directory")
+		modelsPath        = flag.String("modelsPath", "pkg/models", "Path of the model's source code.")
+		outputPath        = flag.String("outputPath", "generated", "Write all files to which directory")
 		tplPath           = flag.String("fileTPLPath", home+"/.genmvc/templates", "Path of the templates to generate code.")
 		POOption          = flag.Bool("po", false, "generate models to po entity.")
 		BOOption          = flag.Bool("bo", false, "generate models to bo entity.")
 		RepositoryOption  = flag.Bool("repository", false, "generate repository iface and implement.")
 		RepositoryVersion = flag.String("repoVersion", "0.0.0", "repository template version.")
 		ServiceOption     = flag.Bool("service", false, "generate service iface and implement.")
-		ServiceVersion    = flag.String("svcVersion", "0.0.0", "repository template version.")
+		ServiceVersion    = flag.String("svcVersion", "0.0.0", "service template version.")
 	)
 
 	flag.CommandLine.Parse(args)
